@@ -1,7 +1,7 @@
 var es = require('event-stream');
 var stream = require('stream');
 var istextorbinary = require('istextorbinary');
-var re = /(=|url\()(["'`]?){1}(?!\/\/)([a-z0-9_\/.-@]+\.[a-z0-9]+)(?:[#?].+?)?\2/gim;
+var re = /(=|url\()(["'`]?){1}(?!\/\/)([a-z0-9_\/.@-]+\.[a-z0-9]+)(?:[#?].+?)?\2/gim;
 
 module.exports = function(map, options) {
     var doCMSReplace = function(file, callback) {
